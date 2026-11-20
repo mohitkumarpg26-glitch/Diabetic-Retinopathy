@@ -1,0 +1,96 @@
+{
+  "selection_objective": "5-fold out-of-fold validation QWK",
+  "seed": 42,
+  "test_used_for_selection": false,
+  "validation_sha256": "6ea2e67acbc37de649fc4c8ee4d2e06da9e6fcb5e20cbd1790eb9e1187a57e25",
+  "run": "baseline_finetune",
+  "candidates": {
+    "raw_argmax": {
+      "oof": {
+        "accuracy": 0.8298279158699808,
+        "macro_f1": 0.6870695105165215,
+        "qwk": 0.9056931239828877,
+        "mae": 0.21414913957934992,
+        "severe_undergrading": 0.07352941176470588,
+        "severe_cases": 15,
+        "eligible": 204,
+        "n": 523
+      },
+      "params": null,
+      "validation_fit": {
+        "accuracy": 0.8298279158699808,
+        "macro_f1": 0.6870695105165215,
+        "qwk": 0.9056931239828877,
+        "mae": 0.21414913957934992,
+        "severe_undergrading": 0.07352941176470588,
+        "severe_cases": 15,
+        "eligible": 204,
+        "n": 523
+      }
+    },
+    "expected_grade_thresholds": {
+      "oof": {
+        "accuracy": 0.780114722753346,
+        "macro_f1": 0.6122472609707069,
+        "qwk": 0.9099644740754652,
+        "mae": 0.2447418738049713,
+        "severe_undergrading": 0.03431372549019608,
+        "severe_cases": 7,
+        "eligible": 204,
+        "n": 523
+      },
+      "params": [
+        0.21229843416344085,
+        1.053554771868746,
+        2.352014264401974,
+        3.2530326654566717
+      ],
+      "validation_fit": {
+        "accuracy": 0.7915869980879541,
+        "macro_f1": 0.6105738222672501,
+        "qwk": 0.9242392164291365,
+        "mae": 0.22179732313575526,
+        "severe_undergrading": 0.0196078431372549,
+        "severe_cases": 4,
+        "eligible": 204,
+        "n": 523
+      }
+    },
+    "class_logit_offsets": {
+      "oof": {
+        "accuracy": 0.8298279158699808,
+        "macro_f1": 0.6773800078162273,
+        "qwk": 0.9117835984361858,
+        "mae": 0.20650095602294455,
+        "severe_undergrading": 0.07352941176470588,
+        "severe_cases": 15,
+        "eligible": 204,
+        "n": 523
+      },
+      "params": [
+        0.21931408330218993,
+        1.1021071370957063,
+        1.4399175341891777,
+        0.8963321002468878
+      ],
+      "validation_fit": {
+        "accuracy": 0.8413001912045889,
+        "macro_f1": 0.7006390469371417,
+        "qwk": 0.9213177070473325,
+        "mae": 0.18929254302103252,
+        "severe_undergrading": 0.06372549019607843,
+        "severe_cases": 13,
+        "eligible": 204,
+        "n": 523
+      }
+    }
+  },
+  "selected": "class_logit_offsets",
+  "params": [
+    0.21931408330218993,
+    1.1021071370957063,
+    1.4399175341891777,
+    0.8963321002468878
+  ],
+  "limitations": "Checkpoint selected using the full validation set previously; this cross-validation is exploratory, not nested independent validation. Test previously inspected in project; subsequent test evaluation is exploratory."
+}

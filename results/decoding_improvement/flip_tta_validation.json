@@ -1,0 +1,25 @@
+{
+  "run": "baseline_finetune",
+  "checkpoint_epoch": 4,
+  "split": "validation",
+  "images": 523,
+  "single_view": {
+    "accuracy": 0.8298279158699808,
+    "macro_f1": 0.6870695105165215,
+    "quadratic_weighted_kappa": 0.9056931239828877,
+    "mean_absolute_grade_error": 0.21414913957934992,
+    "undergraded_by_2plus_all": 0.028680688336520075,
+    "undergraded_by_2plus_grade2plus": 0.07352941176470588,
+    "n_images": 523
+  },
+  "horizontal_flip_average": {
+    "accuracy": 0.8260038240917782,
+    "macro_f1": 0.676182853618915,
+    "quadratic_weighted_kappa": 0.8898777013483912,
+    "mean_absolute_grade_error": 0.22753346080305928,
+    "undergraded_by_2plus_all": 0.036328871892925434,
+    "undergraded_by_2plus_grade2plus": 0.09313725490196079,
+    "n_images": 523
+  },
+  "note": "Validation-only exploratory inference comparison; no weights or training data changed."
+}

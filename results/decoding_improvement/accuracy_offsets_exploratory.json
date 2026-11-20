@@ -1,0 +1,91 @@
+{
+  "objective": "validation accuracy",
+  "method": "five-fold out-of-fold class logit offsets; DenseNet weights unchanged",
+  "seed": 42,
+  "test_used_for_selection": false,
+  "validation_oof": {
+    "raw": {
+      "accuracy": 0.8298279158699808,
+      "macro_f1": 0.6870695105165215,
+      "quadratic_weighted_kappa": 0.9056931239828877,
+      "mean_absolute_grade_error": 0.21414913957934992,
+      "undergraded_by_2plus_all": 0.028680688336520075,
+      "undergraded_by_2plus_grade2plus": 0.07352941176470588,
+      "n_images": 523
+    },
+    "accuracy_offsets": {
+      "accuracy": 0.8317399617590823,
+      "macro_f1": 0.6624632472154721,
+      "quadratic_weighted_kappa": 0.9031270693160086,
+      "mean_absolute_grade_error": 0.21414913957934992,
+      "undergraded_by_2plus_all": 0.03441682600382409,
+      "undergraded_by_2plus_grade2plus": 0.08823529411764706,
+      "n_images": 523
+    }
+  },
+  "fold_offsets": [
+    [
+      -0.03054141510942887,
+      0.8290527503571377,
+      -1.0215862818944532,
+      0.8298415046468103
+    ],
+    [
+      0.28107241754171364,
+      1.2178036729194268,
+      1.0630830914579703,
+      1.0157371461650886
+    ],
+    [
+      0.23492542673025774,
+      1.1565718256674864,
+      0.9852792218145129,
+      0.8171626521061863
+    ],
+    [
+      0.32057499014855884,
+      1.2886590733839631,
+      -1.0693502251795266,
+      1.2867273166348046
+    ],
+    [
+      0.31759518418680777,
+      1.2505685458897755,
+      1.0839095007074167,
+      1.0705727305035377
+    ]
+  ],
+  "frozen_offsets_fit_on_all_validation": [
+    0.3304824628944941,
+    1.249946295656454,
+    1.094576914243309,
+    1.02868096269752
+  ],
+  "saved_qwk_offsets": [
+    0.21931408330218993,
+    1.1021071370957063,
+    1.4399175341891777,
+    0.8963321002468878
+  ],
+  "test_check_after_freeze": {
+    "raw": {
+      "accuracy": 0.8022598870056498,
+      "macro_f1": 0.6147018192631142,
+      "quadratic_weighted_kappa": 0.858519786580695,
+      "mean_absolute_grade_error": 0.2711864406779661,
+      "undergraded_by_2plus_all": 0.03766478342749529,
+      "undergraded_by_2plus_grade2plus": 0.09569377990430622,
+      "n_images": 531
+    },
+    "accuracy_offsets": {
+      "accuracy": 0.8173258003766478,
+      "macro_f1": 0.6230923864557397,
+      "quadratic_weighted_kappa": 0.876988051642565,
+      "mean_absolute_grade_error": 0.2448210922787194,
+      "undergraded_by_2plus_all": 0.03389830508474576,
+      "undergraded_by_2plus_grade2plus": 0.0861244019138756,
+      "n_images": 531
+    }
+  },
+  "limitations": "Checkpoint was previously selected using this validation set. Test was previously examined in the project; this is exploratory, not an independent confirmatory comparison."
+}

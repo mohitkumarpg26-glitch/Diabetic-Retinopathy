@@ -1,0 +1,58 @@
+{
+  "optimization": {
+    "method": "Nelder-Mead",
+    "objective": "maximize_validation_qwk",
+    "initial_thresholds": [
+      0.5,
+      1.5,
+      2.5,
+      3.5
+    ],
+    "calibrated_thresholds": [
+      0.6094519533289098,
+      1.1195831172381574,
+      2.185454313935141,
+      3.646931345347353
+    ]
+  },
+  "validation": {
+    "raw_argmax": {
+      "accuracy": 0.5850860420650096,
+      "macro_f1": 0.26647210636930885,
+      "quadratic_weighted_kappa": 0.6404166562763839,
+      "mean_absolute_grade_error": 0.7418738049713193,
+      "undergraded_by_2plus_all": 0.2179732313575526,
+      "undergraded_by_2plus_grade2plus": 0.5588235294117647,
+      "n_images": 523
+    },
+    "calibrated_expected_grade": {
+      "accuracy": 0.7839388145315488,
+      "macro_f1": 0.558436917106327,
+      "quadratic_weighted_kappa": 0.9127396323194669,
+      "mean_absolute_grade_error": 0.2332695984703633,
+      "undergraded_by_2plus_all": 0.01338432122370937,
+      "undergraded_by_2plus_grade2plus": 0.03431372549019608,
+      "n_images": 523
+    }
+  },
+  "test": {
+    "raw_argmax": {
+      "accuracy": 0.568738229755179,
+      "macro_f1": 0.24050575062837992,
+      "quadratic_weighted_kappa": 0.6270645007816217,
+      "mean_absolute_grade_error": 0.783427495291902,
+      "undergraded_by_2plus_all": 0.1958568738229755,
+      "undergraded_by_2plus_grade2plus": 0.49760765550239233,
+      "n_images": 531
+    },
+    "calibrated_expected_grade": {
+      "accuracy": 0.7815442561205274,
+      "macro_f1": 0.5668791136714935,
+      "quadratic_weighted_kappa": 0.8843727671736246,
+      "mean_absolute_grade_error": 0.2598870056497175,
+      "undergraded_by_2plus_all": 0.026365348399246705,
+      "undergraded_by_2plus_grade2plus": 0.06698564593301436,
+      "n_images": 531
+    }
+  }
+}

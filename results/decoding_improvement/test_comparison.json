@@ -1,0 +1,29 @@
+{
+  "selected": "class_logit_offsets",
+  "raw": {
+    "accuracy": 0.8022598870056498,
+    "macro_f1": 0.6147018192631142,
+    "qwk": 0.858519786580695,
+    "mae": 0.2711864406779661,
+    "severe_undergrading": 0.09569377990430622,
+    "severe_cases": 20,
+    "eligible": 209,
+    "n": 531
+  },
+  "selected_test": {
+    "accuracy": 0.8210922787193974,
+    "macro_f1": 0.6510178757179128,
+    "qwk": 0.882098735049466,
+    "mae": 0.2391713747645951,
+    "severe_undergrading": 0.07655502392344497,
+    "severe_cases": 16,
+    "eligible": 209,
+    "n": 531
+  },
+  "status": "Exploratory test comparison; selection frozen before loading test predictions.",
+  "accuracy_delta_bootstrap_95_percentile_interval": [
+    0.0,
+    0.03766478342749529
+  ],
+  "bootstrap_note": "Paired image bootstrap; no patient independence guarantee; does not adjust for model selection."
+}
