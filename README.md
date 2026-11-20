@@ -211,42 +211,160 @@ This structure represents the project files shown in the GitHub repository. The 
 
 ## 10. Installation and Execution
 
+This repository provides the source code, research documentation, and Streamlit application for diabetic retinopathy severity grading.
+
+The trained DenseNet121 baseline checkpoint is distributed separately through GitHub Releases because of its file size.
+
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/mohitkumarp26-glitch/Diabetic-Retinopathy.git
+git clone https://github.com/mohitkumarpg26-glitch/Diabetic-Retinopathy.git
 cd Diabetic-Retinopathy
 ```
 
-### Step 2: Create a Virtual Environment
+### Step 2: Create a Python Virtual Environment
+
+Python 3.12 was used during development.
 
 ```bash
 python -m venv .venv
 ```
 
-Activate on Windows:
+Activate the environment on Windows:
 
-```bash
+```cmd
 .venv\Scripts\activate
 ```
 
 ### Step 3: Install Dependencies
 
 ```bash
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 
-### Step 4: Run the Streamlit Application
+The locally tested research environment used:
+
+- Python 3.12
+- PyTorch 2.4.1
+- torchvision 0.19.1
+- Streamlit 1.67.0
+
+Other project dependencies are documented in `requirements.txt`.
+
+### Step 4: Download the Trained Model Checkpoint
+
+**GitHub Release:**  
+https://github.com/mohitkumarpg26-glitch/Diabetic-Retinopathy/releases/tag/v1.0.0
+
+Download the release asset:
+
+**File:** `best.pt`  
+**Size:** Approximately 80.4 MB  
+**Model:** Fine-tuned DenseNet121 nominal baseline
+
+This checkpoint was used for the locally verified Streamlit inference demonstration.
+
+### Step 5: Create the Model Directory
+
+After cloning the repository, create the following directories:
+
+```text
+Diabetic-Retinopathy/
+└── runs/
+    └── baseline_finetune/
+```
+
+Place the downloaded `best.pt` inside `baseline_finetune`.
+
+The expected project structure is:
+
+```text
+Diabetic-Retinopathy/
+│
+├── README.md
+├── requirements.txt
+├── START_HERE.md
+├── VALIDATION.md
+├── app.py
+├── retina_project.py
+├── src/
+├── results/
+│
+└── runs/
+    └── baseline_finetune/
+        └── best.pt
+```
+
+**Important:** The `runs` directory is not included in the GitHub source repository. Users must create the required folders and download the checkpoint separately.
+
+### Step 6: Launch the Streamlit Application
+
+From the repository's root directory, execute:
 
 ```bash
-streamlit run app.py
+python -m streamlit run app.py
 ```
 
-The application is designed to support retinal image upload, preprocessing, checkpoint-based inference, and grade-probability visualization.
+The application should become accessible at:
 
-**Important:** The dataset and trained model weights are not included in the public repository. Required checkpoint paths and model availability must be configured before inference can run successfully.
+http://localhost:8501
 
-Consult `START_HERE.md` for additional project-specific instructions.
+### Step 7: Test Model Inference
+
+1. Open the Streamlit application.
+2. Navigate to the **Explore an image** tab.
+3. Upload a de-identified retinal fundus image in PNG or JPEG format.
+4. Click **Estimate research grade**.
+5. Review the predicted severity grade and model score visualization.
+
+The application supports five severity grades:
+
+| Grade | Severity |
+|---|---|
+| 0 | No DR |
+| 1 | Mild |
+| 2 | Moderate |
+| 3 | Severe |
+| 4 | Proliferative DR |
+
+Prediction scores are research model outputs and should not be interpreted as clinically calibrated diagnostic confidence.
+
+### Local Execution Verification
+
+The application was tested locally on Windows with a configured Python environment and the trained baseline checkpoint.
+
+The local test confirmed:
+
+- Streamlit application startup
+- Retinal image upload
+- Image preprocessing and preview
+- PyTorch model inference
+- Adjusted baseline grade prediction
+- Prediction score visualization
+
+**Example local inference result:**
+
+- Original baseline prediction: Grade 2 — Moderate
+- Adjusted baseline prediction: Grade 3 — Severe
+- Checkpoint: `baseline_finetune`, selected at epoch 4
+
+This is an example of application functionality, not an independently validated clinical prediction.
+
+### Reproducibility Status
+
+The application successfully executed locally with the required dependencies and checkpoint.
+
+Independent execution from a fresh GitHub clone has not yet been verified.
+
+The publicly available release includes the baseline checkpoint used for the demonstration. Additional training datasets and other experimental model checkpoints are not included in this release.
+
+For research methodology and validation details, refer to `START_HERE.md`, `VALIDATION.md`, and the accompanying research paper.
+
+### Important Disclaimer
+
+This implementation is intended for academic research and educational demonstration only.
+
+The system is not clinically validated and must not be used independently for medical diagnosis, referral, or treatment decisions.
 
 ## 11. Evaluation Metrics
 
