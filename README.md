@@ -4,7 +4,7 @@
 
 **Authors:** Mohit Kumar and Malhaar Sinha  
 **Department:** Computer Science and Engineering  
-**Institution:** Netaji Subhas University of Technology (NSUT), Delhi, India
+**Institution:** Netaji Subhas University of Technology (NSUT), New Delhi, India
 
 **Submitted To:** Dr. Ankush Jain  
 **Email:** ankush.jain@nsut.ac.in
