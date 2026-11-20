@@ -1,0 +1,7 @@
+numpy==1.26.4
+pandas>=2.2,<3
+pillow>=10,<12
+matplotlib>=3.9,<3.11
+scikit-learn>=1.5,<1.8
+streamlit==1.67.0
+packaging>=24
