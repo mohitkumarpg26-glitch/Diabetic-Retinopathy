@@ -454,6 +454,26 @@ Accordingly, reported comparisons are exploratory image-level results, not evide
 
 The complete research paper documents the methodology, model architecture, experimental findings, confusion matrices, ethical considerations, and supporting references.
 
+## Research Contributions and Model Comparison
+
+This project investigates how nominal classification and ordinal regression affect five-grade diabetic retinopathy severity prediction.
+
+### Key Research Contributions
+
+- *Data Integrity:* Audited the APTOS 2019 dataset for byte-identical duplicates and conflicting labels, retaining 3,504 images.
+- *Model Comparison:* Evaluated independently trained nominal and ordinal DenseNet121 classifiers using fixed data partitions.
+- *Decision Calibration:* Investigated validation-selected logit adjustments and ordinal thresholds without retraining model weights.
+- *Error Analysis:* Compared accuracy, macro F1, quadratic weighted kappa, and severe undergrading across model configurations.
+- *Responsible AI:* Documented dataset limitations, prediction uncertainty, and the need for independent clinical validation.
+
+### Research Findings
+
+The adjusted nominal model achieved the highest classification accuracy (82.11%), while the ordinal model with validation-selected thresholds achieved the highest quadratic weighted kappa (0.8844).
+
+These exploratory findings demonstrate that the choice of decoding strategy can substantially influence evaluation metrics and classification errors.
+
+The results do not establish clinical effectiveness or superiority over previously published approaches.
+
 ## 17. Academic Submission
 
 **Submitted To:**  
